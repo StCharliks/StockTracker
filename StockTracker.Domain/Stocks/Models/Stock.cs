@@ -1,4 +1,4 @@
-﻿namespace StockTracker.Domain.Stocks
+﻿namespace StockTracker.Domain.Stocks.Models
 {
     public class Stock
     {
