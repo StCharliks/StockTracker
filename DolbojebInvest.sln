@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTracker.API", "StockTracker\StockTracker.API.csproj", "{CAF0389E-9111-4864-97A3-DEA176BAA93C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.API", "StockTracker\DolbojebInvest.API.csproj", "{CAF0389E-9111-4864-97A3-DEA176BAA93C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTracker.Application", "StockTracker.Application\StockTracker.Application.csproj", "{216B2DD1-BC8E-4B95-8407-922B8CC641B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Application", "StockTracker.Application\DolbojebInvest.Application.csproj", "{216B2DD1-BC8E-4B95-8407-922B8CC641B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTracker.Domain", "StockTracker.Domain\StockTracker.Domain.csproj", "{A679CCF3-6670-4B84-9D3D-FFA568C26A49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Domain", "StockTracker.Domain\DolbojebInvest.Domain.csproj", "{A679CCF3-6670-4B84-9D3D-FFA568C26A49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTracker.Infrastructure", "StockTracker.DataAccess\StockTracker.Infrastructure.csproj", "{60EA3B7E-8058-4F36-83AE-1824A01E3D15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Infrastructure", "StockTracker.DataAccess\DolbojebInvest.Infrastructure.csproj", "{60EA3B7E-8058-4F36-83AE-1824A01E3D15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTracker.Tests", "StockTracker.Tests\StockTracker.Tests.csproj", "{2721E88C-5281-48A7-AE44-41CF80158AC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Tests", "StockTracker.Tests\DolbojebInvest.Tests.csproj", "{2721E88C-5281-48A7-AE44-41CF80158AC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
