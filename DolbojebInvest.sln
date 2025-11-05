@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Tests", "StockTracker.Tests\DolbojebInvest.Tests.csproj", "{2721E88C-5281-48A7-AE44-41CF80158AC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DolbojebInvest.Domain.Common", "DolbojebInvest.Domain.Common\DolbojebInvest.Domain.Common.csproj", "{DDDEA4F5-66AB-4B65-B44F-505272C4EC4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2721E88C-5281-48A7-AE44-41CF80158AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2721E88C-5281-48A7-AE44-41CF80158AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2721E88C-5281-48A7-AE44-41CF80158AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDEA4F5-66AB-4B65-B44F-505272C4EC4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDEA4F5-66AB-4B65-B44F-505272C4EC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDEA4F5-66AB-4B65-B44F-505272C4EC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDEA4F5-66AB-4B65-B44F-505272C4EC4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
