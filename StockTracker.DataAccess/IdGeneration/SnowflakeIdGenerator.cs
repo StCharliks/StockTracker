@@ -2,23 +2,34 @@
 
 namespace DolbojebInvest.Infrastructure.IdGeneration
 {
-    public class SnowflakeIdGenerator : IIdGenerator<long>
+    public class SnowflakeIdGenerator : IIdGenerator<ulong>
     {
-        private readonly byte _machineId;
+        private readonly short _machineId;
+        private readonly SemaphoreSlim _semaphoreSlim = new SemaphoreSlim(0, 1);
+        private ulong snowflakeBase = 0L;
    
-        public SnowflakeIdGenerator(byte machineId)
+        public SnowflakeIdGenerator(short machineId)
         {
             _machineId = machineId;
         }
 
-        public long GenerateId()
+        public ulong GenerateId()
         {
             throw new NotImplementedException();
         }
 
-        public Task<long> GenerateIdAsync()
+        public async Task<ulong> GenerateIdAsync()
         {
-            throw new NotImplementedException();
+            await _semaphoreSlim.WaitAsync();
+
+            try
+            {
+
+            }
+            finally
+            {
+               _semaphoreSlim.Release();
+            }
         }
     }
 }
