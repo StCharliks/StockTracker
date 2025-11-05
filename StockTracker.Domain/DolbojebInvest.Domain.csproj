@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DolbojebInvest.Domain.Common\DolbojebInvest.Domain.Common.csproj" />
+  </ItemGroup>
+
 </Project>

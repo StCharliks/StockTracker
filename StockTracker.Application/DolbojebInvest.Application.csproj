@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DolbojebInvest.Domain.Common\DolbojebInvest.Domain.Common.csproj" />
+    <ProjectReference Include="..\StockTracker.Domain\DolbojebInvest.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

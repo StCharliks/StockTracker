@@ -7,7 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dividends\Validators\" />
+    <Folder Include="Dividends\Responses\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StockTracker.Application\DolbojebInvest.Application.csproj" />
+    <ProjectReference Include="..\StockTracker.DataAccess\DolbojebInvest.Infrastructure.csproj" />
+    <ProjectReference Include="..\StockTracker.Domain\DolbojebInvest.Domain.csproj" />
   </ItemGroup>
 
 </Project>
