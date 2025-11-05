@@ -4,13 +4,15 @@ namespace DolbojebInvest.Infrastructure.IdGeneration
 {
     public class SnowflakeIdGenerator : IIdGenerator<ulong>
     {
-        private readonly short _machineId;
-        private readonly SemaphoreSlim _semaphoreSlim = new SemaphoreSlim(0, 1);
-        private ulong snowflakeBase = 0L;
-   
-        public SnowflakeIdGenerator(short machineId)
+        private ulong? lastEpoch = null;
+        private ulong sequence = 0L;
+
+        private readonly ulong _machineId;
+        private readonly SemaphoreSlim _semaphoreSlim = new SemaphoreSlim(1, 1);
+
+        public SnowflakeIdGenerator(ushort machineId)
         {
-            _machineId = machineId;
+            _machineId = (ulong)(machineId & 0x3ff);
         }
 
         public ulong GenerateId()
@@ -24,12 +26,35 @@ namespace DolbojebInvest.Infrastructure.IdGeneration
 
             try
             {
+                var timestamp = GetCurrentTimestamp();
 
+                if (timestamp == lastEpoch)
+                {
+                    sequence = (sequence + 1) & 0xfff;
+                    if (sequence == 0)
+                    {
+                        do
+                        {
+                            timestamp = GetCurrentTimestamp();
+                        } while (timestamp <= lastEpoch);
+                    }
+                }
+                else
+                {
+                    sequence = 0;
+                }
+
+                return (timestamp << 22) | (_machineId << 12) | sequence;
             }
             finally
             {
                _semaphoreSlim.Release();
             }
+        }
+
+        private ulong GetCurrentTimestamp()
+        {
+            return (ulong)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
         }
     }
 }
