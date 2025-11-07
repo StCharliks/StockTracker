@@ -23,12 +23,5 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-
-  test:
-    name: Test
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Unit tests
-        run: dotnet test --no-build --verbosity normal
+    - name: Unit tests
+      run: dotnet test --no-build --verbosity normal
