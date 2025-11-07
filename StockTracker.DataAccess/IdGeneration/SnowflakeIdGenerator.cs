@@ -2,25 +2,20 @@
 
 namespace DolbojebInvest.Infrastructure.IdGeneration
 {
-    public class SnowflakeIdGenerator : IIdGenerator<ulong>
+    public class SnowflakeIdGenerator : IIdGenerator<long>
     {
-        private ulong? lastEpoch = null;
-        private ulong sequence = 0L;
+        private long? lastEpoch = null;
+        private long sequence = 0L;
 
-        private readonly ulong _machineId;
+        private readonly long _machineId;
         private readonly SemaphoreSlim _semaphoreSlim = new SemaphoreSlim(1, 1);
 
         public SnowflakeIdGenerator(ushort machineId)
         {
-            _machineId = (ulong)(machineId & 0x3ff);
+            _machineId = (long)(machineId & 0x3ff);
         }
 
-        public ulong GenerateId()
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<ulong> GenerateIdAsync()
+        public async Task<long> GenerateIdAsync()
         {
             await _semaphoreSlim.WaitAsync();
 
@@ -44,6 +39,7 @@ namespace DolbojebInvest.Infrastructure.IdGeneration
                     sequence = 0;
                 }
 
+                lastEpoch = timestamp;
                 return (timestamp << 22) | (_machineId << 12) | sequence;
             }
             finally
@@ -52,9 +48,9 @@ namespace DolbojebInvest.Infrastructure.IdGeneration
             }
         }
 
-        private ulong GetCurrentTimestamp()
+        private long GetCurrentTimestamp()
         {
-            return (ulong)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            return (long)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
         }
     }
 }
