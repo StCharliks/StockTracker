@@ -1,6 +1,5 @@
-﻿using DolbojebInvest.Domain.Currency;
+﻿using DolbojebInvest.Domain.Currencies;
 using DolbojebInvest.Domain.Instruments;
-using StockTracker.Domain.Stocks.Models;
 
 namespace DolbojebInvest.Domain.InvestEvents
 {
@@ -20,7 +19,7 @@ namespace DolbojebInvest.Domain.InvestEvents
 
         public decimal TotalAmount { get; init; }
 
-        public Currency Currency {  get; init; }
+        public required Currency Currency {  get; init; }
 
         public string? Comment { get; init; }
     }
