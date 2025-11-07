@@ -23,7 +23,5 @@ namespace DolbojebInvest.Domain.InvestEvents
         public Currency Currency {  get; init; }
 
         public string? Comment { get; init; }
-
-        public 
     }
 }
