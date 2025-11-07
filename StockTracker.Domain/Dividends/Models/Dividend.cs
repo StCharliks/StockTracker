@@ -1,5 +1,4 @@
-﻿using DolbojebInvest.Domain.Common;
-using StockTracker.Domain.Stocks.Models;
+﻿using DolbojebInvest.Domain.Currencies;
 
 namespace DolbojebInvest.Domain.Dividends.Models
 {
