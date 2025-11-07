@@ -1,7 +1,4 @@
-﻿using DolbojebInvest.Domain.Dividends.Interfaces;
-using DolbojebInvest.Domain.Dividends.Models;
-
-namespace DolbojebInvest.Infrastructure.DataAccess
+﻿namespace DolbojebInvest.Infrastructure.DataAccess
 {
     public class DividendFileRepository : IDividendRepository
     {
